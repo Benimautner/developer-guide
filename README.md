@@ -208,3 +208,13 @@ if (expression) {
 ### Know what you can do with spigot
 
 A simple example is spigot's command executor. Nearly every spigot plugin developer ignores spigot's functionality. If you didn't know, spigot's command executor behaves different when you return false / true, please check out the spigot wiki.
+
+## Git
+
+### Stay updated (and update)
+
+Everytime you start¹ and end² a "programming session" please ¹pull, ²commit and push your changes. In case of anything prevents you from pushing the code in the future, that other developers can continue working at your project.
+
+### Provide Information
+
+Please provide information about your plugin for other developers, meaning, please add a readme and descripe how to use your plugin as an api.
