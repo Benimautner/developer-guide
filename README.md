@@ -84,9 +84,13 @@ void doSomething(args) {
 }
 ```
 
-### Fields
+## Naming
 
-#### Do not use public fields
+### At first, follow oracle's java naming conventions
+
+Please follow oracle's java naming conventions, use *UpperCamelCase* for class names, use *lowercase* for package names, *camelCase* for non-constants and *UPPERCASE* for constants.
+
+### Do not use public fields
 
 Please do not use public fields, instead use getters and setters. Many of our plugins depend on other plugins, when you decide that you dont want to check something when getting a field, you need to add getters and setters, then every plugin using yours needs to be changed.
 
@@ -111,9 +115,32 @@ class AdventurePlayer {
 }
 ```
 
-### Follow oracle java naming conventions
+### Do not use booleans
 
-Please follow oracle's java naming conventions, e.g. use *UpperCamelCase* for class names, use *lowercase* for package names, *camelCase* for non-constants and *UPPERCASE* for constants.
+Please do not use booleans, instead, use enums.
+
+**Bad Example:**
+
+```java
+class Guild {
+  boolean needsInvitation;
+}
+```
+
+**Good Example:**
+
+```java
+class Guild {
+  
+  enum State {
+    OPEN_FOR_ALL,
+    INVITATION_ONLY
+  }
+  
+  private State state;
+  
+}
+```
 
 ## Spigot
 
