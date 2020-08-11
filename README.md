@@ -1,10 +1,8 @@
 # MineTania.net Developer codestyle and workflow guide
 
-## Codestyle
+## Format
 
-### Format
-
-#### Indentation style
+### Indentation style
 
 Use the 1TBS ( https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS) ) style.
 
@@ -36,7 +34,7 @@ void doSomething(args) {
 }
 ```
 
-#### Curly Braces
+### Curly Braces
 
 Use Curly Braces ({, }) whenever you can, dont remove them event if its possible.
 
@@ -62,7 +60,7 @@ void doSomething(args) {
 }
 ```
 
-#### Whitespaces
+### Whitespaces
 
 Please use whitespaces after structure keywords (`if`, `else`, `while`, `for`, `do`, `try`, etc...) or before curly braces, but *never* use more than one whitespace.
 
@@ -113,16 +111,16 @@ class AdventurePlayer {
 }
 ```
 
-#### Follow oracle java naming conventions
+### Follow oracle java naming conventions
 
 Please follow oracle's java naming conventions, e.g. use *UpperCamelCase* for class names, use *lowercase* for package names, *camelCase* for non-constants and *UPPERCASE* for constants.
 
-### Spigot
+## Spigot
 
-#### Plugin YML
+### Plugin YML
 
 **Please** read https://www.spigotmc.org/wiki/plugin-yml/ to understand what you can do with spigot's plugin.yml. Many YouTube "minecraft plugin development" tutorials dont dive into this topic, but please at least define command permissions, command aliases, command descriptions, and permission informations in every of your plugin(/bungee).yml's.
 
-#### Know what you are doing
+### Know what you are doing
 
 A simple example is spigot's command executor. Nearly every spigot plugin developer ignores spigot's functionality. If you didn't know, spigot's command executor behaves different when you return false / true, please check this out.
