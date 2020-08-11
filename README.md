@@ -88,7 +88,7 @@ void doSomething(args) {
 
 ### At first, follow oracle's java naming conventions
 
-Please follow oracle's java naming conventions, use *UpperCamelCase* for class names, use *lowercase* for package names, *camelCase* for non-constants and *UPPERCASE* for constants.
+Please follow oracle's java naming conventions, use *UpperCamelCase* for class names, use *lowercase* for package names, *camelCase* for variables & method names and *UPPERCASE* for constants.
 
 ### Do not use public fields
 
