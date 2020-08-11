@@ -4,7 +4,7 @@
 
 ### Indentation style
 
-Use the 1TBS ( https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS) ) style.
+Use the 1TBS (https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)) style.
 
 **Bad Example:**
 
@@ -62,13 +62,13 @@ void doSomething(args) {
 
 ### Whitespaces
 
-Please use whitespaces after structure keywords (`if`, `else`, `while`, `for`, `do`, `try`, etc...) or before curly braces, but *never* use more than one whitespace.
+Please use whitespaces after structure keywords (`if`, `else`, `while`, `for`, `do`, `try`, etc...) or before curly braces, but *never* use two ore more whitespaces behind each other.
 
 **Bad Example:**
 
 ```java
 void doSomething ( args ){
-  if( expression ){
+  if( expression )  {
     //do something;
   }
 }
