@@ -205,6 +205,6 @@ if (expression) {
 **Please** read https://www.spigotmc.org/wiki/plugin-yml/ to understand what you can do with spigot's plugin.yml. Many YouTube "minecraft plugin development
 *tutorials*" dont dive into this topic, but please define at least command permissions, command aliases, command descriptions, and permission informations in every of your plugin(/bungee).yml's.
 
-### Know what you are doing
+### Know what you can do with spigot
 
 A simple example is spigot's command executor. Nearly every spigot plugin developer ignores spigot's functionality. If you didn't know, spigot's command executor behaves different when you return false / true, please check out the spigot wiki.
