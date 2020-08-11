@@ -36,7 +36,7 @@ void doSomething(args) {
 
 ### Curly Braces
 
-Use Curly Braces ({, }) whenever you can, dont remove them event if its possible.
+Use Curly Braces (`{`, `}`) whenever you can, dont remove them event if its possible.
 
 **Bad Example:**
 
