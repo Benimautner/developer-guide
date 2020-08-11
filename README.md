@@ -142,12 +142,69 @@ class Guild {
 }
 ```
 
+### Do not use magic numbers
+
+Please do not use magic numbers, instead, create constants. Allowed numbers in code are `-1`, `0` and `1`.
+
+**Bad example:**
+
+```java
+adventurePlayer.addMoney((todayOnlineTime / 60) * 20);
+```
+
+**Good example:**
+
+```java
+adventurePlayer.addMoney((todayOnlineTime / TIME_DIVISOR) * COINS_PER_HOUR);
+```
+
+### Do not use acronyms
+
+Instead of using acronyms, use (a) descriptive word(s).
+
+**Bad example:**
+
+```java
+if (sp < MAP) {
+  p.sendMessage(PTL);
+}
+```
+
+**Good example:**
+
+```java
+if (selectedPrice < MIN_AUCTION_PRICE) {
+  player.sendMessage(PRICE_TOO_LOW);
+}
+```
+
+### Do not use plaintext in your logical code
+
+Instead of using plaintext, for example use enums or constants.
+
+**Bad example:**
+
+```java:
+if (expression) {
+  player.sendMessage("You've won something in the case opening!");
+}
+```
+
+**Good example:**
+
+```java:
+if (expression) {
+  player.sendMessage(CASE_OPENING_WON);
+}
+```
+
 ## Spigot
 
 ### Plugin YML
 
-**Please** read https://www.spigotmc.org/wiki/plugin-yml/ to understand what you can do with spigot's plugin.yml. Many YouTube "minecraft plugin development" tutorials dont dive into this topic, but please at least define command permissions, command aliases, command descriptions, and permission informations in every of your plugin(/bungee).yml's.
+**Please** read https://www.spigotmc.org/wiki/plugin-yml/ to understand what you can do with spigot's plugin.yml. Many YouTube "minecraft plugin development
+*tutorials*" dont dive into this topic, but please define at least command permissions, command aliases, command descriptions, and permission informations in every of your plugin(/bungee).yml's.
 
 ### Know what you are doing
 
-A simple example is spigot's command executor. Nearly every spigot plugin developer ignores spigot's functionality. If you didn't know, spigot's command executor behaves different when you return false / true, please check this out.
+A simple example is spigot's command executor. Nearly every spigot plugin developer ignores spigot's functionality. If you didn't know, spigot's command executor behaves different when you return false / true, please check out the spigot wiki.
