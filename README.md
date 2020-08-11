@@ -184,7 +184,7 @@ Instead of using plaintext, for example use enums or constants.
 
 **Bad example:**
 
-```java:
+```java
 if (expression) {
   player.sendMessage("You've won something in the case opening!");
 }
@@ -192,7 +192,7 @@ if (expression) {
 
 **Good example:**
 
-```java:
+```java
 if (expression) {
   player.sendMessage(CASE_OPENING_WON);
 }
