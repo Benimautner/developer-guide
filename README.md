@@ -92,7 +92,7 @@ Please follow oracle's java naming conventions, use *UpperCamelCase* for class n
 
 ### Do not use public fields
 
-Please do not use public fields, instead use getters and setters. Many of our plugins depend on other plugins, when you decide that you dont want to check something when getting a field, you need to add getters and setters, then every plugin using yours needs to be changed.
+Please do not use public fields, instead use getters and setters. Many of our plugins depend on other plugins, when you decide that you want to check something when getting a field, you need to add getters and setters, and then every plugin using yours needs to be changed.
 
 **Bad Example:**
 
