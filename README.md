@@ -117,7 +117,7 @@ class AdventurePlayer {
 
 ### Do not use booleans
 
-Please do not use booleans, instead, use enums.
+Please do not use booleans as variables (of course you can use them as return values), instead, use enums.
 
 **Bad Example:**
 
