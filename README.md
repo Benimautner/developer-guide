@@ -84,6 +84,46 @@ void doSomething(args) {
 }
 ```
 
+### Blank lines
+
+Please do not overuse blank lines. Please avoid them at the class end and the beggining, the same thing applies for methods.
+
+**Bad Example:**
+
+```java
+class Fisher {
+
+  private FishingRod fishingRod;
+
+  public void fish() {
+  
+    fisherService.submit(() -> {
+      
+      fishingRod.throw();
+      
+      doSomething();
+    });
+    
+  }
+  
+}
+```
+
+**Good Example:**
+
+```java
+class Fisher {
+  private FishingRod fishingRod;
+
+  public void fish() {
+    fisherService.submit(() -> {
+      fishingRod.throw();
+      doSomething();
+    });
+  }
+}
+```
+
 ## Naming
 
 ### At first, follow oracle's java naming conventions
