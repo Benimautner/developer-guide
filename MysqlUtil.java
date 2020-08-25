@@ -119,10 +119,10 @@ public class MysqlUtil {
         }
     }
 
-    public int executeInsertWithReturnNewID(String query, Map<Integer, String> parameters, String IDField) {
+    public int executeInsertWithReturnNewID(String query, Map<Integer, String> parameters, String idField) {
         if (isConnected()) {
             try {
-                String[] generatedColumns = {IDField};
+                String[] generatedColumns = {idField};
                 PreparedStatement statement = connection.prepareStatement(query, generatedColumns);
                 if (parameters != null && parameters.size() > 0) {
                     for (Map.Entry<Integer, String> param : parameters.entrySet()) {
