@@ -258,3 +258,9 @@ Everytime you start¹ and end² a "programming session" please ¹pull, ²commit 
 ### Provide Information
 
 Please provide information about your plugin for other developers, meaning, please add a readme and descripe how to use your plugin as an api.
+
+## Mysql
+
+### Use prepared statements
+
+Use prepared statements in every sql query. We've created an Mysql connector util, which you can use in all of your plugins (https://github.com/MineTania/developer-guide/blob/master/MysqlUtil.java)
