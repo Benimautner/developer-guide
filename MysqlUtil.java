@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.Arrays;
 import java.util.Map;
 
 public class MysqlUtil {
@@ -20,7 +21,7 @@ public class MysqlUtil {
         }
     }
 
-    public static MysqlUtil getInstance() {
+    public static synchronized MysqlUtil getInstance() {
         if (instance == null) {
             new MysqlUtil();
         }
@@ -91,10 +92,6 @@ public class MysqlUtil {
         }
     }
 
-    public ResultSet executeQuery(String query) {
-        return executeQuery(query, null);
-    }
-
     public ResultSet executeQuery(String query, Map<Integer, String> parameters) {
         if (isConnected()) {
             try {
@@ -102,6 +99,30 @@ public class MysqlUtil {
                 if (parameters != null && parameters.size() > 0) {
                     for (Map.Entry<Integer, String> param : parameters.entrySet()) {
                         statement.setString(param.getKey(), param.getValue());
+                    }
+                }
+                if (query.toLowerCase().startsWith("update") || query.toLowerCase().startsWith("insert") || query.toLowerCase().startsWith("delete")) {
+                    statement.execute();
+                    return null;
+                } else {
+                    return statement.executeQuery();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            return null;
+        } else {
+            return null;
+        }
+    }
+
+    public ResultSet executeQuery(String query, String... parameters) {
+        if (isConnected()) {
+            try {
+                PreparedStatement statement = connection.prepareStatement(query);
+                if (parameters.length > 0) {
+                    for (int i = 0; i < parameters.length; i++) {
+                        statement.setString(i + 1, parameters[i]);
                     }
                 }
                 if (query.toLowerCase().startsWith("update") || query.toLowerCase().startsWith("insert") || query.toLowerCase().startsWith("delete")) {
