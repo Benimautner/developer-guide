@@ -14,16 +14,19 @@ public class MysqlUtil {
     private static String password = "";
 
     private MysqlUtil() {
-        instance = this;
         openConnection();
         if (isConnected()) {
             testConnection();
         }
     }
 
-    public static synchronized MysqlUtil getInstance() {
+    public static MysqlUtil getInstance() {
         if (instance == null) {
-            new MysqlUtil();
+            synchronized(MysqlUtil.class) {
+                if (instance == null) {
+                    instance = new MysqlUtil();
+                }
+            }
         }
         return instance;
     }
